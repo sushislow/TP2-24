@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+  <script>
+  function operacao() {
+    let n3 = document.querySelector("input#n3")
+    if(n3.value == "+"){
+        form1.action = "soma"
+    }
+    else if(n3.value == "-"){
+        form1.action = "sub"
+    }
+    else if(n3.value == "/"){
+        form1.action = "div"
+    }
+    else if(n3.value == "*"){
+        form1.action = "mult"
+    }
+    form1.submit();
+  }
+  </script>
+ </head>
+ <body>
+  <h1>Digite dois números:</h1>
+  <form action="" method="get" id="form1">
+   <input type="text" name="n1" id="n1" />
+   <input type="text" name="n2" id="n2"/>
+   <input type="text" name="n3" id="n3"/>
+   <input type="button" onclick="operacao()" value="Calcular">
+  </form>
+  <h1>Resultado:</h1>
+  <h1 id="resultado"><%=resp%></h1>
+ </body>
+</html>
